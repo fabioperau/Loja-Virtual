@@ -1,14 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Rock+Salt&display=swap');
 
+:root{
+    --cor0: #4EDAF2;
+    --cor1: #05CCF0;
+    --cor2: #03A0BD;
+    --cor3: #026070;
+    --cor4: #246570;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
 
 body,button,input{
     font: 400 16px "roboto", sans-serif;
 }
+
+/* Pagina sobre*/
 /* Header*/
 
 .main-header{
@@ -22,13 +37,9 @@ body,button,input{
     width: 100%;
 }
 .header-list-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 16px 0; 
 }
 .nav-item{
-    list-style-type: none;
     text-transform: uppercase;
     color: white;
     transition: 0.2s;
@@ -77,3 +88,54 @@ hr{
 .section-descrisao + .section-descrisao{
     margin-top: 16px;
 }
+/* Footer*/
+
+.main-footer{
+    background-image: linear-gradient(to bottom, rgb(215, 203, 243), rgb(90, 18, 74));
+    padding: 16px 0;
+}
+.main-footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.movie-title-medium{
+    font-family: "Rock Salt", cursive;
+    color: white;
+    font-size: 26px;
+}
+.list-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-item{
+    width: 25px;
+    margin: 10px;
+    
+}
+
+/* Pagina index*/
+.traile-button{
+    color: white;
+    font-weight: bold;
+    border: 2px solid rgb(90, 18, 74);
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+/* Responsivel*/
+
+@media (max-width: 588px){
+    .movie-title-large{
+        font-size: 36px;
+    }
+    .movie-imagem{
+        width: 40%;
+    }
+    .main-footer-container{
+        flex-direction: column;
+    }
+}
+
+   
