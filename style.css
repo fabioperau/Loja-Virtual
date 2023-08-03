@@ -6,6 +6,8 @@
     --cor2: #03A0BD;
     --cor3: #026070;
     --cor4: #246570;
+    --cor5: white;
+    --cor6: #5a124a;
 }
 *{
     margin: 0;
@@ -41,7 +43,7 @@ body,button,input{
 }
 .nav-item{
     text-transform: uppercase;
-    color: white;
+    color: var(--cor5);
     transition: 0.2s;
 }
 .nav-item:hover{
@@ -56,7 +58,7 @@ hr{
 }
 .movie-title-large{
     font-family: "Rock Salt", cursive;
-    color: white;
+    color: var(--cor5);
     font-size: 54px;
 }
 /* Main*/
@@ -91,7 +93,7 @@ hr{
 /* Footer*/
 
 .main-footer{
-    background-image: linear-gradient(to bottom, rgb(215, 203, 243), rgb(90, 18, 74));
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor6));
     padding: 16px 0;
 }
 .main-footer-container{
@@ -119,8 +121,34 @@ hr{
 .traile-button{
     color: white;
     font-weight: bold;
-    border: 2px solid rgb(90, 18, 74);
+    border: 2px solid var(--cor6);
+    border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.4);
+    transition: 2s;
+}
+.traile-button:hover{
+    background-color: rgb(255, 0, 212);
+}
+.traile-button-player{
+    color: var(--cor6);
+    margin: 24px 0;
+    border: 2px solid var(--cor6);
+    border-radius: 50%;
+    padding: 1%;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 2s;
+}
+.traile-button-player:hover{
+    color: var(--cor5);
+    background-color: rgb(255, 0, 212);
+}
+.show-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show-item + .show-item{
     
 }
 
