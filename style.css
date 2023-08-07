@@ -149,7 +149,33 @@ hr{
     align-items: center;
 }
 .show-item + .show-item{
-    
+    border-top: 1px solid #333;
+    margin-top: 8px;
+    padding-top: 8px;
+}
+.show-date{
+    width: 13%;
+}
+.show-city{
+    width: 28%;
+}
+.show-place{
+    width: 35%;
+}
+.buy-ticket{
+    width: 20%;
+    background-color: var(--cor6);
+    color: var(--cor5);
+    font-weight: bold;
+    border: 2px solid var(--cor6);
+    border-radius: 6px;
+    padding: 4px 2px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.buy-ticket:hover{
+    background-color: transparent;
+    color: var(--cor6);
 }
 
 /* Responsivel*/
@@ -163,6 +189,23 @@ hr{
     }
     .main-footer-container{
         flex-direction: column;
+    }
+    .show-item{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .show-date,.show-place,.show-city{
+        width: 32%;
+        padding: 4px;
+    }
+    
+    .buy-ticket{
+        width: 60%;
+        margin-top: 12px;
+        padding: 12px 2px;
+    }
+    .show-item + .show-item{
+        margin-top: 12px;
     }
 }
 
