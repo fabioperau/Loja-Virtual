@@ -29,7 +29,6 @@
     <main class="main-section">
         <section class="container normal-section">
             <h2 class="section-title">Produtos</h2>
-
             <div class="Produtos-container">
               <div class="movie-produto">
                 <strong class="produto-title">Produtos 1</strong>
@@ -67,33 +66,34 @@
         </section>
         <section class="container normal-section">
             <h2 class="section-title">imagem</h2>
-            <div>
-                <strong>Cartão 1</strong>
-                <br>
-                <img src="imagem/cartão de visita1.png" alt="cartão">
-                <div>
-                    <span>R$ 39.99</span>
-                    <button type="button">Adicionar ao carrinho</button>
+            <div class="Produtos-container">
+                <div class="movie-produto">
+                <strong class="produto-title">Cartão 1</strong>
+                <img class="produto-image" src="imagem/cartão de visita1.png" alt="cartão">
+                <div class="produto-price-container">
+                    <span class="produto-price">R$ 39.99</span>
+                    <button class="button-hover-background" type="button">Adicionar ao carrinho</button>
                 </div>
               </div>
-              <div>Cartão 2</strong>
-                <br>
-                <img src="imagem/dani cartão de visita frente pronto.png" alt="cartão">
-                <div>
-                    <span>R$ 69.99</span>
-                    <button type="button">Adicionar ao carrinho</button>
+              <div class="movie-produto">
+              <strong class="produto-title">Cartão 2</strong>
+                <img class="produto-image" src="imagem/dani cartão de visita frente pronto.png" alt="cartão">
+                <div class="produto-price-container">
+                    <span class="produto-price">R$ 69.99</span>
+                    <button class="button-hover-background" type="button">Adicionar ao carrinho</button>
+                </div>
                 </div>
               </div>
         </section>
         <section class="container normal-section">
             <h2 class="section-title">carrinho</h2>
 
-            <table>
+            <table class="cart-table">
                 <thead>
                     <tr>
-                        <th>Item</th>
-                        <th>Preço</th>
-                        <th>Quantidade</th>
+                        <th class="table-head-item first-col">Item</th>
+                        <th class="table-head-item second-col">Preço</th>
+                        <th class="table-head-item third-col">Quantidade</th>
                     </tr>
                 </thead>
 
