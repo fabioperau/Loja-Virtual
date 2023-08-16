@@ -1,0 +1,1 @@
+const = remove-protudo document.getElementsByClassName("remove-produto-buton")
