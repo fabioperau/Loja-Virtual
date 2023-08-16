@@ -3,6 +3,7 @@ if (document.readyState == "loading"){
 }else{
     ready()
 }
+var totaCarrinho = "0,00"
 
 function ready(){
     const removeProtudoButtons=document.getElementsByClassName("remove-produto-buton")
@@ -20,6 +21,34 @@ function ready(){
     for (var i = 0; i < addToCartButtons.length; i++){
         addToCartButtons[i].addEventListener("click", addProdutoToCard)
     }
+
+    const buttonFinalizar = document.getElementsByClassName("button-finalizar")[0]
+    buttonFinalizar.addEventListener("click", makeFinalizar)
+}
+
+function makeFinalizar(){
+    if (totaCarrinho == "0,00"){
+        alert("Seu carrinho está vazio!")
+    }else{
+        alert(
+            `
+                Obrigado pela sua compra!
+                Valor do pedido: R$${totaCarrinho}
+                Volte sempre :)
+
+            `
+        )
+    }
+
+    document.querySelector(".cart-table tbody").innerHTML = ""
+    updateTotal()
+}
+
+function checkIfInprtIsNull(event){
+    if (event.target.value == "0"){
+        event.target.parentElement.parentElement.remove()
+    }
+    updateTotal()
 }
 
 function addProdutoToCard(event){
@@ -42,8 +71,8 @@ function addProdutoToCard(event){
     newCardProduto.innerHTML =
     `
         <td class="produto-identification">
-            <img class="cart-produto-image" src="${produtoImage}" alt="${produtoTitle }">
-            <strong class="cart-produ">${produtoTitle }</strong>
+            <img class="cart-produto-image" src="${ produtoImage}" alt="${ produtoTitle }">
+            <strong class="cart-produ"> ${ produtoTitle }</strong>
         </td>
         <td>
             <span class="cart-produto-price">${produtoPrice}</span>
@@ -57,7 +86,7 @@ function addProdutoToCard(event){
     const tableBody = document.querySelector(".cart-table tbody")
     tableBody.append(newCardProduto)
     updateTotal()
-    newCardProduto.getElementsByClassName("produto-qtd-input")[0].addEventListener("chance", updateTotal)
+    newCardProduto.getElementsByClassName("produto-qtd-input")[0].addEventListener("change", updateTotal)
     newCardProduto.getElementsByClassName("remove-produto-buton")[0].addEventListener("click", removeProdutos)
 }
 
@@ -70,7 +99,7 @@ function removeProdutos(event){
 
 
 function updateTotal(){
-    let totaCarrinho = 0
+    totaCarrinho = 0
     const cartProduto = document.getElementsByClassName("cart-produto")
     for (var i = 0; i < cartProduto.length; i++){
        // console.log(cartProduto[i])
